@@ -2,6 +2,10 @@
 
 This project implements an AI agent server that communicates in the Kansai dialect of Japanese. It utilizes the `a2a-server` framework, Google Agent Development Kit (`google-adk`), LiteLLM, and a Google Gemini model.
 
+Thanks a lot Chris Hay for his easy to understand explanation.
+This code based on his code base, please go check:
+https://github.com/chrishayuk/a2a-server
+
 ## Features
 
 *   Responds to prompts in Kansai dialect (Kansai-ben).
