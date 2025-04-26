@@ -26,11 +26,13 @@ This project implements an AI agent server that communicates in the Kansai diale
 2.  **Set up virtual environment and install dependencies:**
     ```bash
     # Create and activate virtual environment (using uv)
-    uv venv
-    source .venv/bin/activate 
+    uv init
     
     # Install dependencies
-    uv pip install -r requirements.txt  # Or potentially: uv sync
+    uv add a2a-server
+    uv add google-adk
+    uv add litellm
+    uv add python-dotenv
     ```
     *Note: Dependencies are managed via `pyproject.toml` and locked in `uv.lock`.*
 
@@ -43,15 +45,21 @@ This project implements an AI agent server that communicates in the Kansai diale
 
 ## Running the Server
 
-Ensure your virtual environment is activated (`source .venv/bin/activate`).
-
 Start the server using:
 
 ```bash
-python kansai/main.py
+uv run -m a2a_server --config agent.yaml 
 ```
 
 The server will start, typically on `http://localhost:8000` (as configured in `agent.yaml`).
+
+## Using CLI
+
+After starting the server, use:
+
+```bash
+uvx a2a-cli
+```
 
 ## Configuration
 
